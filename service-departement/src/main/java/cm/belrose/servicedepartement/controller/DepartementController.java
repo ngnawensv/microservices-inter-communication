@@ -16,6 +16,7 @@ public class DepartementController {
 
     @PostMapping("/")
     public Departement saveDepartement( @RequestBody Departement departement){
+        log.info("inside the saveDepartement of DepartementController");
         return departementService.saveDepartement(departement);
     }
 
