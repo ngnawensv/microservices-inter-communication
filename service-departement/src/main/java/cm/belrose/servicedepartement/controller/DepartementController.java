@@ -18,7 +18,7 @@ public class DepartementController {
     @Autowired
     private DepartementService departementService;
 
-    @Operation(summary = "Enregistrer un département dans la  la base de données")
+    @Operation(summary = "Enregistrer un departement dans la  la base de données")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
                     description = "Enregistrement avec succès!!!",
@@ -34,7 +34,8 @@ public class DepartementController {
         return departementService.saveDepartement(departement);
     }
 
-    @Operation(summary = "Recherche le département {} dans la  la base de données")
+
+    @Operation(summary = "Recherche un département dans la  la base de données en fonction du Id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
                     description = "Rechercher un département dans la base de donnée",
@@ -43,7 +44,6 @@ public class DepartementController {
                     description = "Département introuvable",
                     content = @Content)
     })
-
     @GetMapping("{id}")
     public Departement findDepartemetById(@PathVariable("id") Long id){
         return departementService.findDepartemetById(id);

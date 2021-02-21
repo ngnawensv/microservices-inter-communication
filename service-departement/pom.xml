@@ -37,7 +37,9 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!--Pour la documentation d'une API-->
+		<!--	###################################################
+		########## openapi-ui dependency pour la documentation automatique d'une API #####################
+		###################################################-->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
@@ -57,13 +59,17 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>2.4.5</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
-		</dependency>
+<!--	######################################################################
+		 Zipkin dependency pour le traçge distribuer.Il permet le debugage les
+		 applicaations basées sur l'architecture microservice
+		######################################################################-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
 	</dependencies>
 
